@@ -1,22 +1,36 @@
 # Auto_filling_feedback_in_MAKAUT_portal
-# This code will be for auto-filling of several feedback data of MAKAUT portal without human intervention if once initiated.
+## This project is for auto-form feedback completion within the MAKAUT portal.
 
-Before running it chrome version installed in the PC should be up-to-date.
-
-To update chrome version: 
-  Open Google chrome -> Click on 3 consecutive vertical dots (Just below the close section) under it go to "Help" -> Click "About Google Chrome" -> If it is not up to date Update   it else note the version.
+  # Installation Steps
   
-Now, 
+### Step 1: Git clone this repository
+```bash
+$ git clone https://github.com/kundankumardec16/Auto_filling_feedback_in_MAKAUT_portal.git
+$ cd Auto_filling_feedback_in_MAKAUT_portal
+```
   
-  Step 1 : Download chrome driver from https://chromedriver.chromium.org/
-           Note : The downloaded file will be in zip folder so unzip it.
-  Step 2 : Copy it's complete address i.e address of recently unzip exe file.
-  Step 3 : Paste the path in the code under comment "#Connecting Selenium WebDriver with Chrome WebDriver" like ...
-           driver=webdriver.Chrome(executable_path="C:\\Users\\HP\\AppData\\Local\\Temp\\Rar$EXa0.142\\chromedriver.exe")
-  Step 4 : In the code enter your roll number and password within the quotes send_keys(""). It is indicated by the comment in the code where roll number should be entered and                password.
-  Step 5 : Save it and run.
+### Step 2: Pip install requirements
+```bash
+$ python3 -m pip install selenium
+```
   
-The code written will work only if the website "https://makaut1.ucanapply.com/smartexam/public/" after login has not been changed.
+### Step 3: Download Chromium Driver and copy the file path
+Download the Chromium Driver from **https://chromedriver.chromium.org/** (Note: Unzip the file after it's finished downloading).
+Copy the FULL PATH of the recently unzipped .exe file.
+  
+### Step 4: Paste in the Driver file path
+Paste the path within the quotations in `Discrete_mathematics_autofill_feedback.py` under the comment "#Connecting Selenium WebDriver with Chrome WebDriver" 
+# Example:
+`driver=webdriver.Chrome(executable_path="*C:\Users\HP\AppData\Local\Temp\Rar$EXa0.142\chromedriver.exe*")`
+  
+### Step 5: Enter roll number and password
+In the code enter your roll number and password within the quotes `send_keys("")`. It is next to the comment # Enter your roll no/password here
+  
+### Step 6: Save the file and run 
+```bash
+$ python3 Discrete_mathematics_autofill_feedback.py
+```
 
-
-Thank you
+**NOTES:**
+*Ensure your version of Google Chrome is up to date. You can update it here:* **chrome://settings/help**
+*The code written will only work if the website* **"https://makaut1.ucanapply.com/smartexam/public/"** *after login has not been changed.*
